@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Grill Master Wide Bold';
+    src:  url('./fonts/GrillMaster/fonnts.com-grillmaster_extwide_006_bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grill Master Wide Bolder';
+  src: url('./fonts/GrillMaster/fonnts.com-grillmaster_extwide_007_extra_bold.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src:  url('./fonts/AktivGrotesk/TTF/AktivGrotesk-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#grid-container {
+  display: grid;
+  height: 70%;
+  width: 70%;
+  gap: 0.3rem;
+  margin: auto;
+  grid-template-areas: 
+  'item1 item1 item2 item3'
+  'item4 item5 item6 item3'
+  'item7 item7 item7 item3';
+}
+
+#grid-container .grid-item {
+  display: flex;
+  position: relative;
+}
+
+#grid-container .grid-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.item1{
+  grid-area: item1;
+  justify-content: center;
+}
+
+.text {
+  z-index: 2;
+  position: absolute;
+  font-family: 'Grill Master Wide Bold', sans-serif;
+    background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 40%, #968E85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.item2{
+  grid-area: item2;
+  line-height: 1;
+}
+
+.item2 .text{
+  padding: 1rem;
+}
+
+.item2 .text .subtitle{
+  font-size: medium;
+  font-family: 'Grill Master Wide Bolder', sans-serif !important;
+  line-height: 0.9;
+  margin: 0;
+  padding: 0;
+}
+
+.item2 .text .subtitle p {
+  margin: 0;
+  padding: 0;
+}
+
+.item2 .text .title{
+  display: flex;
+  font-size: 2.2rem;
+  font-family: 'Aktiv Grotesk', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.item2 .text .title p{
+  margin: 0;
+  padding: 0;
+}
+
+.item3{
+  grid-area: item3;
+  justify-content: center;
+}
+
+.item3 .text {
+  margin: 0;
+  font-size: 1.1rem;
+  text-align: end;
+}
+
+.item3 .text h1 {
+  line-height: 0;
+}
+
+.item4{
+  grid-area: item4;
+  justify-content: center;
+}
+
+.item4 .text {
+  text-align: center;
+}
+
+.item5{
+  grid-area: item5;
+}
+
+.item5 .title {
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  color: white;
+  font-family: 'Grill Master Wide Bolder', sans-serif;
+  margin: 1rem;
+}
+
+.item5 .title span {
+  font-size: xx-large;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 40%, #968E85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.item5 .subtitle {
+  z-index: 2;
+  position: absolute;
+  font-family: 'Grill Master Wide Bolder', sans-serif;
+  color: white;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.item6{
+  grid-area: item6;
+  justify-content: center;
+}
+
+.item6 .text {
+  font-size: large;
+  text-align: center;
+  font-family: 'Aktiv Grotesk', sans-serif !important;
+}
+
+.item7{
+  grid-area: item7;
+}
+
+.item7 .text {
+  display: flex;
+  font-size: 1.5rem;
+  text-align: left;
+  font-family: 'Aktiv Grotesk', sans-serif !important;
+  line-height: 0.8;
+  margin-left: 1rem;
+  align-self: flex-start;
+}
+
+.item7 .text span {
+  font-size: large !important;
+  font-family: 'Grill Master Wide Bolder', sans-serif !important;
+}
+
+.item7 .subtitle {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 0.7rem;
+  font-size: 0.5rem;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  align-self: flex-end;
+  text-align: center;
+  margin-left: 1.3rem;
+  margin-bottom: 1rem;
+}
